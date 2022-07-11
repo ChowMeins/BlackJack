@@ -1,15 +1,17 @@
 import java.util.*;
 
+/*
+Player class
+Gamemode currently not in use as gamemodes aren't implemented
+*/
 public class Player {
     private String name;
     private int gamemode;
-    private int total;
     private ArrayList<Card> hand = new ArrayList<>();
 
     Player() {
         name = "";
         gamemode = 0;
-        total = 0;
     }
     public void deal(ArrayList<Card> deck) {
         Card currCard = deck.get(deck.size() - 1);
@@ -62,7 +64,7 @@ public class Player {
                 newTotal += hand.get(i).getValue();
             }
         }
-        return this.total = newTotal;
+        return newTotal;
     }
     public ArrayList<Card> getHand() {
         return this.hand;
@@ -72,9 +74,6 @@ public class Player {
     }
     public void setGamemode(int newGM) {
         this.gamemode = newGM;
-    }
-    public void setTotal(int newTotal) {
-        this.total = newTotal;
     }
 
 }
