@@ -39,5 +39,4 @@ public class Card {
     public void setSuit(char suit) {
         this.suit = suit;
     }
-
 }
