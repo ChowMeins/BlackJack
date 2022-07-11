@@ -1,10 +1,16 @@
+/* 
+Card class
+Card value stored as an integer
+Card suit stored as a character
+*/
 public class Card {
     private int value;
     private char suit;
-
+    
+    // Constructors
     Card() {
         value = 0;
-        suit = '-';
+        suit = '-'; // Temporary suit
     }
     Card(int value) {
         this.value = value;
@@ -17,17 +23,20 @@ public class Card {
         this.value = copy.value;
         this.suit = copy.suit;
     }
+    
+    // Getters
     public int getValue() {
         return this.value;
     }
     public char getSuit() {
         return this.suit;
     }
+    
+    // Setters
     public void setValue(int value) {
         this.value = value;
     }
     public void setSuit(char suit) {
         this.suit = suit;
     }
-
 }
